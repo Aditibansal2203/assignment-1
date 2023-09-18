@@ -1,0 +1,31 @@
+import pandas as pd
+import numpy as np
+df = pd.read_csv("India agriculture crop production.csv")
+# Calculate the shape of the dataset
+shape = df.shape
+
+# Calculate the interquartile range (IQR)
+q75, q25 = np.percentile(df['Area'], [75 ,25])
+iqr = q75 - q25
+
+# Calculate the variance
+variance = np.var(df['Area'])
+
+# Calculate the standard deviation
+std_deviation = np.std(df['Area'])
+
+# Calculate the mean absolute deviation
+mean_abs_deviation = np.mean(np.abs(df['Area'] - np.mean(df['Production'])))
+
+# Print the results
+print("The shape of the dataset is:", shape)
+print("The interquartile range (IQR) is:", iqr)
+print("The variance is:", variance)
+print("The standard deviation is:", std_deviation)
+print("The mean absolute deviation is:", mean_abs_deviation)
+OUTPUT :The shape of the dataset is: (345407, 10)
+The interquartile range (IQR) is: nan
+The variance is: 2101155272.8788517
+The standard deviation is: 45838.360276943284
+The mean absolute deviation is: 946909.8659960103 
+
