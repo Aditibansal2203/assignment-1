@@ -1,0 +1,73 @@
+import pandas as pd
+from statistics import harmonic_mean
+
+# Read the dataset
+df = pd.read_csv("India agriculture crop production.csv")
+
+# Calculate the mean
+mean = df['Area'].mean() 
+
+# Calculate the median
+median = df['Area'].median()
+
+# Calculate the mode
+mode = df['Area'].mode()
+
+# Calculate the harmonic mean
+harmonic = harmonic_mean(df['Area'])
+
+# Print the results
+print("The mean is:", mean)
+print("The median is:", median)
+print("The mode is:", mode)
+print("The harmonic mean is:", harmonic)
+ OUTPUT: The mean is: 958371.1486639765
+The median is: 717.0
+The mode is: 0    1.0 
+# Calculate the mean
+mean = df['Yield'].mean()
+
+# Calculate the median
+median = df['Yield'].median()
+
+# Calculate the mode
+mode = df['Yield'].mode()
+
+# Calculate the harmonic mean
+harmonic = harmonic_mean(df['Yield'])
+
+# Print the results
+print("The mean is:", mean)
+print("The median is:", median)
+print("The mode is:", mode)
+print("The harmonic mean is:", harmonic)
+OUTPUT:
+The mean is: 79.40756931424343
+The median is: 1.0
+The mode is: 0    1.0
+Name: Yield, dtype: float64
+The harmonic mean is: 0
+
+
+mean = df['Production'].mean()
+
+# Calculate the median
+median = df['Production'].median()
+
+# Calculate the mode
+mode = df['Production'].mode()
+
+# Calculate the harmonic mean
+harmonic = harmonic_mean(df['Production'])
+
+# Print the results
+print("The mean is:", mean)
+print("The median is:", median)
+print("The mode is:", mode)
+print("The harmonic mean is:", harmonic)
+ OUTPUT: The mean is: 958371.1486639765
+The median is: 717.0
+The mode is: 0    1.0
+Name: Production, dtype: float64
+The harmonic mean is: 0
+
